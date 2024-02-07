@@ -3,7 +3,8 @@ $(document).ready(function(){
     $('.title').click(function(){
       $('.container').addClass('open');
       if(clickCound===0){
-        const Audio = new Audio("./sound.mpeg").play(); 
+        const Audio = new Audio("./sound.mpeg"); 
+        Audio.play()
         clickCound++;
       }
            
