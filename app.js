@@ -1,11 +1,14 @@
 $(document).ready(function(){
-  let clickCount = 0;
+  let audio;
+
   $('.title').click(function(){
       $('.container').addClass('open');
-      if(clickCount === 0){
-          const audio = new Audio("./sound.mpeg");
+      if (!audio || audio.paused) {
+          audio = new Audio("./sound.mpeg");
           audio.play();
           clickCount++;
+      } else {         
+          audio.currentTime = 0;
       }
   });
 
