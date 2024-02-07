@@ -1,17 +1,15 @@
 $(document).ready(function(){
-    let clickCound = 0;
-    $('.title').click(function(){
+  let clickCount = 0;
+  $('.title').click(function(){
       $('.container').addClass('open');
-      if(clickCound===0){
-        const Audio = new Audio("./sound.mpeg"); 
-        Audio.play()
-        clickCound++;
+      if(clickCount === 0){
+          const audio = new Audio("./sound.mpeg");
+          audio.play();
+          clickCount++;
       }
-           
-    });
-    
-    
-    $('.close').click(function(){
-      $('.container').removeClass('open');
-    });
   });
+
+  $('.close').click(function(){
+      $('.container').removeClass('open');
+  });
+});
